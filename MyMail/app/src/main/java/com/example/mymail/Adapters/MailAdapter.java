@@ -52,12 +52,12 @@ public class MailAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(layout, null);
             holder = new ViewHolder();
-            /*
+
             holder.subject = (TextView) convertView.findViewById(R.id.textViewListSubject);
             holder.message = (TextView) convertView.findViewById(R.id.textViewListMessage);
             holder.sender = (TextView) convertView.findViewById(R.id.textViewListSenderName);
-            holder.shape = (TextView) convertView.findViewById(R.id.textViewListSenderName);
-            */
+            //holder.shape = (TextView) convertView.findViewById(R.id.textViewListSenderName);
+
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

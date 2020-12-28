@@ -18,12 +18,12 @@
         />
 
     <fragment
-        android:id="@+id/dataFragment"
-        android:name="com.example.mymail.Fragments.DataFragment"
+        android:id="@+id/listFragment"
+        android:name="com.example.mymail.Fragments.ListFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        tools:layout="@layout/fragment_data"
+        tools:layout="@layout/fragment_list"
         />
 
 
