@@ -3,12 +3,12 @@ package com.example.mymail.Adapters;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
+import android.graphics.drawable.shapes.Shape;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-
 
 import com.example.mymail.Models.Mail;
 import com.example.mymail.R;
@@ -52,12 +52,10 @@ public class MailAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = LayoutInflater.from(context).inflate(layout, null);
             holder = new ViewHolder();
-
-            holder.subject = (TextView) convertView.findViewById(R.id.textViewListSubject);
-            holder.message = (TextView) convertView.findViewById(R.id.textViewListMessage);
-            holder.sender = (TextView) convertView.findViewById(R.id.textViewListSenderName);
-            //holder.shape = (TextView) convertView.findViewById(R.id.textViewListSenderName);
-
+            holder.subject = (TextView) convertView.findViewById(R.id.textViewListAsunto);
+            holder.message = (TextView) convertView.findViewById(R.id.textViewListMensaje);
+            holder.sender = (TextView) convertView.findViewById(R.id.textViewListSenderNombre);
+            //holder.shape = (TextView) convertView.findViewById(R.id.textViewListSender);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

@@ -1,51 +1,44 @@
 package com.example.mymail.Fragments;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
 import com.example.mymail.Models.Mail;
 import com.example.mymail.R;
 
 public class DetailsFragment extends Fragment {
 
+    //Atirbutos del mensaje al abrirlo
     private TextView asunto;
     private TextView remitente;
     private TextView mensaje;
-
-    private LinearLayout wrapper;
+    private LinearLayout wrapper; //El cotontorno del mensaje
 
     public DetailsFragment() {
-        // Required empty public constructor
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_details, container, false);
-
-        asunto = (TextView) view.findViewById(R.id.textViewAsunto);
-        remitente = (TextView) view.findViewById(R.id.textViewRemitente);
-        mensaje = (TextView) view.findViewById(R.id.textViewMensaje);
-
+        //Cogemos los ID de fragment_detalis.xml
+        asunto = (TextView) view.findViewById(R.id.textViewFragmentAsunto);
+        remitente = (TextView) view.findViewById(R.id.textViewFragmentRemitente);
+        mensaje = (TextView) view.findViewById(R.id.textViewFragmentMensaje);
         wrapper = (LinearLayout) view.findViewById(R.id.wrapper);
 
-        // Inflate the layout for this fragment
         return view;
     }
 
+    //Muestra el email
     public void renderMail(Mail mail) {
         wrapper.setVisibility(View.VISIBLE);
-
         asunto.setText(mail.getSubject());
         remitente.setText(mail.getSenderName());
         mensaje.setText(mail.getMessage());
-
     }
 }

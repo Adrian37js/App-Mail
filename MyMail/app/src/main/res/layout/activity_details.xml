@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.DetailsActivity">
+    android:orientation="horizontal"
+    tools:context=".Activities.DetailsActivity"
+    tools:ignore="MissingDefaultResoruce">
 
     <fragment
         android:id="@+id/fragmentDetailsMail"

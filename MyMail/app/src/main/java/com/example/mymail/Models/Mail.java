@@ -1,6 +1,4 @@
 package com.example.mymail.Models;
-
-
 import com.example.mymail.Utils.Util;
 
 public class Mail {
