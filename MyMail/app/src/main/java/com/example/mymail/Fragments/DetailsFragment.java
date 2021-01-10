@@ -2,11 +2,15 @@ package com.example.mymail.Fragments;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.example.mymail.Models.Mail;
 import com.example.mymail.R;
 
@@ -17,7 +21,6 @@ public class DetailsFragment extends Fragment {
     private TextView remitente;
     private TextView mensaje;
     private LinearLayout wrapper; //El cotontorno del mensaje
-
     public DetailsFragment() {
     }
 
@@ -30,6 +33,8 @@ public class DetailsFragment extends Fragment {
         remitente = (TextView) view.findViewById(R.id.textViewFragmentRemitente);
         mensaje = (TextView) view.findViewById(R.id.textViewFragmentMensaje);
         wrapper = (LinearLayout) view.findViewById(R.id.wrapper);
+        wrapper.setVisibility(View.INVISIBLE);
+
 
         return view;
     }

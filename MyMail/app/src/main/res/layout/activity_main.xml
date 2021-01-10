@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity">
+    tools:context=".Activities.MainActivity"
+    android:orientation="vertical">
 
     <fragment
-        android:id="@+id/listFragment"
+        android:id="@+id/fragmentList"
         android:name="com.example.mymail.Fragments.ListFragment"
+        tools:layout="@layout/fragment_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_list"
-        />
+        android:layout_weight="1" />
 </LinearLayout >

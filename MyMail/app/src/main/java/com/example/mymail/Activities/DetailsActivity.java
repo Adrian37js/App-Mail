@@ -17,7 +17,7 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        //Recogemos los datos del Main y se la ponemos a las correspondientes variables
+        //recogemos los datos del Main y se la ponemos a las correspondientes variables
         if (getIntent().getExtras() != null){
             asunto = getIntent().getStringExtra("asunto");
             remitente = getIntent().getStringExtra("remitente");
