@@ -55,7 +55,6 @@ public class MailAdapter extends BaseAdapter {
             holder.subject = (TextView) convertView.findViewById(R.id.textViewListAsunto);
             holder.message = (TextView) convertView.findViewById(R.id.textViewListMensaje);
             holder.sender = (TextView) convertView.findViewById(R.id.textViewListSenderNombre);
-            //holder.shape = (TextView) convertView.findViewById(R.id.textViewListSender);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();

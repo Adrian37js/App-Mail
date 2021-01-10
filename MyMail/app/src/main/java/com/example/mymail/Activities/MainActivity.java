@@ -3,6 +3,9 @@ package com.example.mymail.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+
 import com.example.mymail.Fragments.ListFragment;
 import com.example.mymail.Fragments.DetailsFragment;
 import com.example.mymail.Models.Mail;
@@ -22,15 +25,15 @@ public class MainActivity extends AppCompatActivity implements ListFragment.Data
     }
 
     private void setMultiPanel() {
-        MultiPanel = (getSupportFragmentManager().findFragmentById(R.id.fragmentDetailsMail) != null);
+        MultiPanel = (getSupportFragmentManager().findFragmentById(R.id.fragmentDetails) != null);
     }
 
     @Override
     public void onListClick(Mail mail) {
+        DetailsFragment detailsFragment = (DetailsFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentDetails);
 
         //En este if comprobamos si sirve para moviles o para tablets
         if (MultiPanel) {
-            DetailsFragment detailsFragment = (DetailsFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentDetailsMail);
             detailsFragment.renderMail(mail);
         } else {
             //Pasamos con el Intent los datos del Main al DetailsAtivity
